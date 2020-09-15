@@ -18,6 +18,7 @@
             <RowDefinition Height="2*" />
             <RowDefinition Height="0.6*" />
         </Grid.RowDefinitions>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center">이미지 자리</Label>
         <Border BorderBrush="#5E5E5E" BorderThickness="5" CornerRadius="15" Margin="20" Grid.Row="1">
             <StackPanel Margin="10">
                 <Label FontWeight="Bold" FontSize="25" Margin="10">사용자 정보 변경</Label>
@@ -31,18 +32,18 @@
                     <PasswordBox x:Name="ChangePwd" Width="250" BorderBrush="Transparent" />
                     <Separator Style="{StaticResource separatorStyle}" />
                 </WrapPanel>
-                <Button Margin="10" x:Name="ChangeImage" Width="70" Height="30">이미지 변경</Button>
+                <Button Margin="10" x:Name="ChangeImage" Width="70" Height="30">정보 변경</Button>
             </StackPanel>
         </Border>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label FontWeight="Bold">Job 설정</Label>
             <WrapPanel Orientation="Horizontal">
-                <CheckBox x:Name="ChkDarkMode" />
-                <Label>다크모드 설정</Label>
+                <CheckBox x:Name="ChkDarkMode" VerticalAlignment="Center" />
+                <Label VerticalAlignment="Center">다크모드 설정</Label>
             </WrapPanel>
             <WrapPanel Orientation="Horizontal" Margin="0, 5, 0, 0">
-                <CheckBox x:Name="ChkNotice" />
-                <Label>알림 설정</Label>
+                <CheckBox x:Name="ChkNotice" VerticalAlignment="Center" />
+                <Label VerticalAlignment="Center">알림 설정</Label>
             </WrapPanel>
         </StackPanel>
     </Grid>
