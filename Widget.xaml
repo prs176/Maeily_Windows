@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maeily_Windows"
         mc:Ignorable="d"
-        Title="Widget" Height="550" Width="412" ResizeMode="NoResize">
-    <Grid>
-    </Grid>
+        Title="Widget" Height="200" Width="600" WindowStyle="None" Opacity="0.2" Background="Black">
+    <StackPanel Margin="10">
+        <TextBlock FontWeight="Bold" FontSize="50" Foreground="White" TextTrimming="CharacterEllipsis">메일리 위젯 테스트</TextBlock>
+    </StackPanel>
 </Window>
