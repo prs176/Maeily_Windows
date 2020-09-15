@@ -5,7 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maeily_Windows"
         mc:Ignorable="d"
-        Title="Maeily" Height="550" Width="412">
+        Title="Maeily" Height="550" Width="412" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="separatorStyle" TargetType="Separator">
+            <Setter Property="BorderBrush" Value="#5E5E5E" />
+            <Setter Property="BorderThickness" Value="30" />
+        </Style>
+    </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="0.6*" />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#5E5E5E" BorderThickness="5" CornerRadius="15" Margin="20" Grid.Row="1">
+            <StackPanel Margin="10">
+                <Label FontWeight="Bold" FontSize="25" Margin="10">사용자 정보 변경</Label>
+                <WrapPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <Label Margin="0, 0, 5, 0" FontWeight="Bold">이름 변경</Label>
+                    <TextBox x:Name="ChangeName" Width="250" BorderBrush="Transparent" />
+                    <Separator Style="{StaticResource separatorStyle}" />
+                </WrapPanel>
+                <WrapPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 10, 0, 0">
+                    <Label Margin="0, 0, 5, 0" FontWeight="Bold">비밀번호 변경</Label>
+                    <PasswordBox x:Name="ChangePwd" Width="250" BorderBrush="Transparent" />
+                    <Separator Style="{StaticResource separatorStyle}" />
+                </WrapPanel>
+                <Button Margin="10" x:Name="ChangeImage" Width="70" Height="30">이미지 변경</Button>
+            </StackPanel>
+        </Border>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label FontWeight="Bold">Job 설정</Label>
+            <WrapPanel Orientation="Horizontal">
+                <CheckBox x:Name="ChkDarkMode" />
+                <Label>다크모드 설정</Label>
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Margin="0, 5, 0, 0">
+                <CheckBox x:Name="ChkNotice" />
+                <Label>알림 설정</Label>
+            </WrapPanel>
+        </StackPanel>
     </Grid>
 </Window>
